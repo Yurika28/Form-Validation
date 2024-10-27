@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Solway:wght@300;400;500;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scrollbar-width: none;
+    background-image: url(./wine.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right 50% bottom 35%;
+}
+
+
+.form{
+    width: 320px;
+    padding: 25px 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1) inset;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.form h3{
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+}
+
+.form .field{
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.field-info{
+    display: flex;
+    gap: 10px;
+}
+.form .field i{
+    color: white;
+    position: relative;
+    text-align: right;
+}
+.form label{
+    color: white;
+    font-size: 0.8rem;
+    padding-bottom: 5px;
+}
+form .field input{
+    height: 20px;
+    width: 300px;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 8px;
+    border-color: transparent;
+}
+
+.form .field input:hover{
+    border-color: 1px solid black;
+}
+
+.wine-menu select{
+    height: 40px;
+    width: 325px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border: transparent;
+    padding: 5px 10px;
+    border-right: 16px solid transparent;
+}
+
+.wine-menu option{
+    padding: 10px 0;
+}
+
+.submit-btn{
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.submit-btn button{
+    height: 45px;
+    width: 100px;
+    border-radius: 10px;
+    border-color: transparent;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.submit-btn button:hover{
+    transform: scale(1.1);
+    background-color: maroon;
+    color: white;
+}
+
+.form .error{
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.field-info{
+    position: relative;
+    display: inline-block;
+}
+
+.field .add-info{
+    display: none;
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border: 5px;
+    z-index: 1;
+}

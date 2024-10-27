@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Project Submission</title>
+</head>
+<body>
+
+<form id="uploadForm">
+    <h1>project submission form</h1>
+    <div class="name">
+        <label for="name">Project Name</label>
+        <input type="text" required>
+    </div>
+    <div class="overview">
+        <label for="project-overview">Project Overview</label>
+        <input type="text" placeholder="Brief Description of the Project" minlength="100" maxlength="500" required>
+    </div>
+    <div class="date">
+        <label for="date">Start date</label>
+        <input type="date" required>
+        <label for="end-date">End date</label>
+        <input type="date" required>
+    </div>
+    <div class="upload-file">
+        <label for="fileUpload">Upload your PDF file (Max 1 MB):</label>
+        <input type="file" id="fileUpload" accept="application/pdf">
+        <div class="error" id="error-message"></div>
+    </div>
+    <fieldset>
+        <legend>Self Assessment Project</legend>
+        <div class="check-box">
+            <input type="checkbox">
+            <label for="Plagiarism-Free">Plagiarism free</label>
+        </div>
+        <div class="check-box">
+            <input type="checkbox">
+            <label for="Proofread">Proofread for grammar and spelling</label>
+        </div>
+        <div class="check-box">
+            <input type="checkbox">
+            <label for="Formatting">Follows formatting guidelines</label>
+        </div>
+        <div class="check-box">
+            <input type="checkbox">
+            <label for="reference">Uses correct referencing style (APA/MLA)</label>
+        </div>
+        <div class="errorBox"></div>
+    </fieldset>
+    <div class="submit-btn">
+        <button type="submit">Upload</button>
+    </div>    
+</form>
+</body>
+</html>

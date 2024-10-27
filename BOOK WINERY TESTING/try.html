@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover Information Tooltip</title>
+    <style>
+        .icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .tooltip {
+            display: none; /* Initially hidden */
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Icon element -->
+<i class="icon" id="info-icon">ℹ️</i>
+<!-- Tooltip element -->
+<div class="tooltip" id="tooltip">Additional information goes here!</div>
+
+<script>
+    // Select the icon and tooltip elements
+    const infoIcon = document.getElementById('info-icon');
+    const tooltip = document.getElementById('tooltip');
+
+    // Event listener to show tooltip on mouseover
+    infoIcon.addEventListener('mouseover', (e) => {
+        // Position the tooltip near the icon
+        tooltip.style.left = `${e.pageX + 10}px`;
+        tooltip.style.top = `${e.pageY + 10}px`;
+
+        // Show the tooltip
+        tooltip.style.display = 'block';
+    });
+
+    // Event listener to hide tooltip on mouseout
+    infoIcon.addEventListener('mouseout', () => {
+        tooltip.style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
